@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQI Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <h1>AQI Tracker</h1>
+    <div class="search-bar">
+      <input type="text" id="citySearch" placeholder="Search a city...">
+      <button id="searchBtn">Search</button>
+       <button id="compareToggleBtn">Compare Cities</button>
+        <button id="resetButton">Reset</button>
+      </div>
+
+      <div class="compare-bar" id="compareBar" style="display: none;">
+          <input type="text" id="compareCity1" placeholder="First city...">
+      <input type="text" id="compareCity2" placeholder="Second city...">
+      <button id="compareRunBtn">Run Comparison</button>
+     
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="cards-grid" id="cardsGrid">
+      <!-- city cards will be injected here by JS -->
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+    
+    
