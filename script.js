@@ -47,7 +47,7 @@ async function fetchAQIData(city) {1
 
 let cardGrid = document.querySelector("#cardsGrid");
 
-function renderAQICards(data, city) {
+function renderAQICards(data) {
   
  
   let card = document.createElement("div");
@@ -82,7 +82,7 @@ btn.addEventListener("click", async function () {
   let result = await fetchAQIData(city);
   if (result) {
       cardGrid.innerHTML = "";
-    renderAQICards(result.data, city);
+    renderAQICards(result.data);
   } else {
     cardGrid.innerHTML = `<h1 style="color: red;">City not found. Try another search.</h1>`;
   }
@@ -121,7 +121,7 @@ compRunBtn.addEventListener("click", async function(){
 
    results.forEach(function(result,index){
        if(result.value){
-        renderAQICards(result.value.data,cities[index]);
+        renderAQICards(result.value.data);
        }else{
         let p = document.createElement("p");
         p.textContent = `${cities[index]} not found`;
