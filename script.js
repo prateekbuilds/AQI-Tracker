@@ -22,15 +22,9 @@ async function fetchAQIData(city) {1
   }
 }
 
-let cardGrid = document.querySelector("#cardsGrid");
 
-function renderAQICards(data, city) {
-  
- 
-  let card = document.createElement("div");
-  card.className = "aqi-card";
 
-  function getAQIBand(aqi) {
+ function getAQIBand(aqi) {
     if (aqi > 0 && aqi <= 50) {
       return { label: "Good", color: "green" };
     }
@@ -50,6 +44,16 @@ function renderAQICards(data, city) {
       return { label: "Hazardous", color: "maroon" };
     }
   }
+
+let cardGrid = document.querySelector("#cardsGrid");
+
+function renderAQICards(data, city) {
+  
+ 
+  let card = document.createElement("div");
+  card.className = "aqi-card";
+
+ 
 
   let band = getAQIBand(data.aqi);
 
